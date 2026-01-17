@@ -1,12 +1,15 @@
 console.log("js paired");
 
 
+backendURL = 'http://127.0.0.1:5500'
+
+
 
 
 // testing
 
 document.getElementById("send").onclick = async () => {
-    const res = await fetch("http://127.0.0.1:5500/api/data", {
+    const res = await fetch(`${backendURL}/api/data`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -30,7 +33,7 @@ let clientKey = null
 let clientKeyID = null
 
 async function initKey(){
-    const res = await fetch("http://127.0.0.1:5500/sec/genKey")
+    const res = await fetch(`${backendURL}/sec/genKey`,)
     const data = await res.json()
     clientKey = data['key']
     clientKeyID = data['keyId']
