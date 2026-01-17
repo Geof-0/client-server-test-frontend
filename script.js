@@ -1,7 +1,7 @@
 console.log("js paired");
 
 
-backendURL = 'http://127.0.0.1:5500'
+backendURL = 'https://client-server-test-backend.onrender.com'
 
 
 
